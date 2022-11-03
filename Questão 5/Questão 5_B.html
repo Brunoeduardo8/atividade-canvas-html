@@ -1,0 +1,40 @@
+<!DOCTYPE <html>
+<html lang="pt-br">
+
+<head>
+    <title>Questão 5-B</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <canvas id="matriz" width= "600" height="600"><p>Esse navegador não suporta o canvas</canvas>
+    <style>
+        canvas{border:1px solid rgb(11, 7, 7);}
+      </style>
+      </body>
+
+<script>
+    var canvas = document.querySelector('canvas');
+    var fig = canvas.getContext('2d');
+
+    for(var i=0; i<6; i++){
+        for (var j= 0; j < 3; j++) {
+            fig.strokeStyle= "blue"
+          fig.strokeRect(10 + (60 * i), 10 + (60 * j), 50, 50);
+          fig.beginPath();
+          fig.moveTo(50 + (60 * i), 47 + (60 * j));
+          fig.lineTo(20 + (60 * i), 47 + (60 * j));
+          fig.lineTo(35 + (60 * i), 20 + (60 * j));
+          fig.closePath();
+          fig.stroke();
+    }
+}
+</script> 
+
+
+
+
+
+</html>

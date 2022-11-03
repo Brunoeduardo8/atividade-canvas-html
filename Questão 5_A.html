@@ -1,0 +1,60 @@
+<!DOCTYPE <html>
+<html lang="pt-br">	
+<head>
+		<title>Questão 5-A</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    </head> 
+    
+    
+    <body>
+        <canvas id="fig" height="150" width="700"> <p> Esse navegador não suporta o canvas</canvas>
+      <style>
+        canvas{border:1px solid rgb(11, 7, 7);}
+      </style>
+        </body>
+        
+        <script>
+            
+            var canvas = document.getElementById("fig");
+            var fig = canvas.getContext("2d");
+           
+
+            //fig 1
+      fig.strokeStyle="blue"
+      fig.strokeRect(5,5,200,100);
+      fig.beginPath();
+      fig.fillStyle = "blue";
+      fig.moveTo(70, 80);
+      fig.lineTo(140, 80);
+      fig.lineTo(105, 20);
+      fig.fill();
+
+            //fig 2
+      fig.beginPath();
+      fig.arc(340, 60, 52, (Math.PI / 180) * 360, (Math.PI / 180) * 0);
+      fig.stroke();
+      fig.beginPath();
+      fig.fillStyle = "blue";
+      fig.fillRect(309, 30, 62, 62);
+
+            //fig 3
+      fig.beginPath();
+      fig.moveTo(590,110);
+      fig.lineTo(515,5);
+      fig.lineTo(445,110);
+      fig.closePath();
+      fig.stroke();
+      fig.beginPath();
+      fig.moveTo(680,110);
+      fig.lineTo(605,5);
+      fig.lineTo(535,110);
+      fig.closePath();
+      fig.stroke();
+        </script>
+
+
+
+
+
+    </html>

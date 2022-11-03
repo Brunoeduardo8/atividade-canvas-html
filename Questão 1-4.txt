@@ -1,0 +1,10 @@
+Questões
+1 – Com suas palavras descreva o que é a DOM e qual sua relação com o HTML?
+É uma interface de programação para documento em HTML, ela define métodos que permitem acesso à árvore, snedo assim podendo modificar sua estrutura.
+2 – O que é o canvas HTML?
+Uma Ferramenta usada para construção de estruturas e graficos, muito utilizada na programação com criação de jogos, utilizada também com para construção de estruturas front-end.
+3 – Quais as linguagens e tecnologias comumente envolvidas no desenvolvimento de produtos baseados em
+canvas html?
+JavaScript, CSS, HTML
+4 – Explique para que serve o código “document.getElementById()”
+Muito utilizado para atributos com valor especifico, muito utilizado no DOM HTML facil na hora de fazer a manipulação de cadastro com ID ou até mesmo CPF como uma identificação especifica, sendo assim mais facil de se manipular.

@@ -1,0 +1,103 @@
+<!DOCTYPE <html>
+<html lang="pt-br">
+
+<head>
+    <title>Questão </title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css"></style>
+</head>
+  
+<body>
+
+<canvas id="circulo" width="600" height="600"><p>Esse navegador não suporta o canvas</canvas>
+<style>
+    canvas {border: 2px solid rgb(0, 0, 0);}
+</style>
+</body>
+
+
+<script>
+    var canvas = document.querySelector('canvas');
+    var fig = canvas.getContext('2d');
+  
+  
+    var dirX;
+    var dirY;
+    var posX;
+    var posY;
+    var velocity;
+    var time;
+  
+    var IMG = new Image();
+        IMG.src = "Time.png";
+
+    function Imagevi(){
+        fig.Imagevi(IMG, x, y, 120, 120);
+    }
+  
+    function Start(){
+      dirX = dirY = 0;
+      posX = 280;
+      posY = 280;
+      velocity = 35;
+      time = setInterval(Update, 100);
+      document.addEventListener('keydown', KeyDown);
+      document.addEventListener('keyup', KeyUp);
+    }
+  
+    function KeyDown(){
+      var tecla = event.key;
+      
+      if(tecla === 'ArrowRight')
+          dirX = 1
+      else if(tecla === 'ArrowLeft')
+          dirX = -1
+      else if(tecla === 'ArrowUp')
+          dirY = -1
+      else if(tecla === 'ArrowDown')
+          dirY = 1
+    }
+    
+    function KeyUp(){
+      var tecla = event.key;
+      
+      if(tecla === 'ArrowRight')
+          dirX = 0
+      else if(tecla === 'ArrowLeft')
+          dirX = 0
+      else if(tecla === 'ArrowUp')
+          dirY = 0
+      else if(tecla === 'ArrowDown')
+          dirY = 0
+    }
+  
+    function Update(){
+      fig.clearRect(0, 0, canvas.width, canvas.height);
+  
+      novaPosX = posX + dirX * velocity;
+      novaPosY = posY + dirY * velocity;
+  
+      if (novaPosX > canvas.width){
+          novaPosX = canvas.width-Imagevi;
+              }
+               
+              if ( novaPosX < 0){
+                  novaPosX = Imagevi;
+              } 
+              if (novaPosY > canvas.height){
+                  novaPosY = canvas.height-Imagevi;
+              }
+              if (novaPosY < 0) {
+                  novaPosY = Imagevi;
+              }
+              
+              posX = novaPosX;
+      posY = novaPosY;
+      Imagevi(posX, posY);
+            
+      }
+  
+    window.addEventListener('load', Start)
+  </script>
+  </html>
